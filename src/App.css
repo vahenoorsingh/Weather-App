@@ -1,0 +1,110 @@
+#cityName{
+    font-size: 2rem;
+}
+/* general data */
+.generalData{
+    display: grid;
+    place-items: center;
+}
+
+/* slides css */
+.slidesContainer {
+    width: 600px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: repeat(5,1fr); 
+    
+    grid-template-areas: 
+        "hourly hourly hourly hourly hourly hourly"
+        "daily  daily  aqi    aqi    map    map"
+        "daily  daily  wind   wind   map    map"
+        "daily  daily  uv     sunset feel   precip"
+        "moon   moon   humid  vis    press  avg";
+    gap: 10px;
+}
+.slide {
+    background-color: cadetblue;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+}
+.hourlyForecastSlide { grid-area: hourly; aspect-ratio: 6/1;}
+.dailyForecastSlide { grid-area: daily; aspect-ratio: 2/3;}
+.aqiSlide { grid-area: aqi; aspect-ratio: 2/1;}
+.precepitationmapSlide { grid-area: map; aspect-ratio: 1/1;}
+.windSlide { grid-area: wind; aspect-ratio: 2/1;}
+.uvSlide { grid-area: uv; aspect-ratio: 1/1;}
+.sunsetSlide { grid-area: sunset; aspect-ratio: 1/1;}
+.feellikeSlide { grid-area: feel; aspect-ratio: 1/1;}
+.precepitationSlide { grid-area: precip; aspect-ratio: 1/1;}
+.moonSlide { grid-area: moon; aspect-ratio: 2/1;}
+.humiditySlide { grid-area: humid; aspect-ratio: 1/1;}
+.visibilitySlide { grid-area: vis; aspect-ratio: 1/1;}
+.pressureSlide { grid-area: press; aspect-ratio: 1/1;}
+.averagesSlide { grid-area: avg; aspect-ratio: 1/1;}
+
+/* Hourly Forecast css */
+.hourlyForecastSlide{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+.hourContent{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Daily Forecast css */
+.dailyForecastSlide{
+    font-size: 0.8rem;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.dailyTitle{
+    display: flex; align-items: center; gap: 5px; padding-bottom: 5px;
+
+}
+.dailyCard{
+    display: grid;
+    grid-template-columns: 1fr 1fr 4fr; 
+    gap: 15px; 
+    border-top: 1px black solid;
+    padding-bottom: 5px; 
+    padding-top: 5px; 
+}
+.dailySlider{
+    background-color: aqua;
+}
+.dailySliderConatiner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.dailySlider{
+    height: 5px;
+    width: 50%;
+    background-color: aqua;
+    border-radius: 10px;
+}
+
+/* aqi css */
+.aqiContent{
+    display: flex;
+    flex-direction: column;
+}
+.aqiSlider{
+    width: 100%;
+    height: 2px;
+    background-color: aqua;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border-radius: 10px;
+}
