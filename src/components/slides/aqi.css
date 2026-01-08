@@ -1,0 +1,14 @@
+.aqiContent{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    gap: 3px;
+}
+.aqiSlider{
+    width: 100%;
+    height: 5px;
+    background-color: aqua;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border-radius: 10px;
+}

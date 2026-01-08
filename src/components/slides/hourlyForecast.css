@@ -1,0 +1,23 @@
+.hourlyForecastSlide{
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+}
+.hourContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+.overview{
+    border-bottom: 1px rgba(255, 255, 255, 0.405) solid;
+    margin-bottom: 10px;
+}
+.hourContent{
+    font-size: 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
