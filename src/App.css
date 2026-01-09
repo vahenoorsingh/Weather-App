@@ -3,6 +3,7 @@
 }
 /* general data */
 .generalData{
+    color: white;
     padding-top: 100px;
     display: grid;
     place-items: center;
