@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="appContainer">
-      <GeneralData />
+      <GeneralData data={weather.current} locationName={weather.location} maxTemp={weather.daily.temperature_2m_max[0]} minTemp={weather.daily.temperature_2m_min[0]} />
       <Slides data={weather} />
     </div>
   )

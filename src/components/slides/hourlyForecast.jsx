@@ -1,7 +1,7 @@
 import "./hourlyForecast.css"
 function HourlyForecastSlide({ hourlyData }) {
     if (!hourlyData) return null;
-    console.log(hourlyData)
+    // console.log(hourlyData)
     const currentHour = new Date().getHours()
     const startIndex = hourlyData.time.findIndex(t => t.includes(`T${currentHour.toString().padStart(2, '0')}:00`))
     const finalStartIndex = startIndex === -1 ? 0 : startIndex
