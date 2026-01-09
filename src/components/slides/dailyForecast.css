@@ -2,6 +2,7 @@
     font-size: 0.8rem;
     overflow: hidden;
     overflow-y: scroll;
+    scrollbar-width: none;
 }
 .dailyTitle{
     color: rgba(255, 255, 255, 0.582);
@@ -20,8 +21,11 @@
     padding-top: 15px; 
     font-size: 1.4rem;
 }
-.dailySlider{
-    background-color: aqua;
+.sliderBar{
+    position: absolute;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(to right, #87ceeb, #90ee90, #ffd700);
 }
 .dailySliderConatiner{
     display: flex;
@@ -32,6 +36,9 @@
 .dailySlider{
     height: 5px;
     width: 50%;
-    background-color: aqua;
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
 }

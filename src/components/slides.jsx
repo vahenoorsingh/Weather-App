@@ -3,11 +3,12 @@ import HourlyForecastSlide from "./slides/hourlyForecast";
 import DailyForecastSlide from "./slides/dailyForecast";
 import AqiSlide from "./slides/aqi";
 function Slides({ data }) {
+  console.log(data)
   return (
     <div className="slidesContainer">
       <HourlyForecastSlide hourlyData={data.hourly} />
-      <DailyForecastSlide /*dailyData={data.daily}*/ />
-      <AqiSlide />
+      <DailyForecastSlide dailyData={data.daily} />
+      <AqiSlide aqiData={data.aqi} />
       <div className="precepitationmapSlide slide"></div>
       <div className="windSlide slide"></div>
       <div className="uvSlide slide"></div>

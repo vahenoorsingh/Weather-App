@@ -7,8 +7,18 @@
 .aqiSlider{
     width: 100%;
     height: 5px;
-    background-color: aqua;
+    background: linear-gradient(to right, #00e400, #ffff00, #ff7e00, #fe0000, #8f3f97, #7e0023);
     margin-top: 4px;
     margin-bottom: 4px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.aqiDot{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
     border-radius: 10px;
 }

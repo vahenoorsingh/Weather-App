@@ -17,7 +17,7 @@ function App() {
     }
     fetchWeather()
   }, [])
-  console.log(weather)
+  // console.log(weather)
   if (!weather) {
     return <div className="loading">Loading Weather Data...</div>;
   }
