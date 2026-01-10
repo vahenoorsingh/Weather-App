@@ -45,7 +45,7 @@ function HourlyForecastSlide({ hourlyData }) {
                     }
                     const tempString = parseInt(temp, 10).toString() + "°"
                     return (
-                        <div className="hourContent" key={crypto.randomUUID()}>
+                        <div className="hourContent" key={index}>
                             <div style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>{index === 0 ? 'Now' : hourString}</div>
                             <span class="material-symbols-outlined" style={{ fontSize: '2rem' }}>
                                 {weatherIconMap[weatherCodes[index]]}

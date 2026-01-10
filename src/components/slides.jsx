@@ -2,15 +2,18 @@ import { React } from "react";
 import HourlyForecastSlide from "./slides/hourlyForecast";
 import DailyForecastSlide from "./slides/dailyForecast";
 import AqiSlide from "./slides/aqi";
+import Wind from "./slides/wind";
+
 function Slides({ data }) {
-  console.log(data)
+  // console.log(data)
   return (
     <div className="slidesContainer">
       <HourlyForecastSlide hourlyData={data.hourly} />
       <DailyForecastSlide dailyData={data.daily} />
       <AqiSlide aqiData={data.aqi} />
       <div className="precepitationmapSlide slide"></div>
-      <div className="windSlide slide"></div>
+      {/* <div className="windSlide slide"></div> */}
+      <Wind windData={data.current} />
       <div className="uvSlide slide"></div>
       <div className="sunsetSlide slide"></div>
       <div className="feellikeSlide slide"></div>

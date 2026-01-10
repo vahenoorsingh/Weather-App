@@ -13,3 +13,10 @@ body{
   font-family: 'Inter';
   background-color: rgb(79 138 190);
 }
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}

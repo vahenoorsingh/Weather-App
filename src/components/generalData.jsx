@@ -1,7 +1,7 @@
 import React from "react";
 
 function GeneralData({ data, locationName, maxTemp, minTemp }) {
-    // console.log(data)
+    console.log(data)
     return (
         <div className="generalData">
             <div style={{ display: 'flex', alignItems: 'center' }}>

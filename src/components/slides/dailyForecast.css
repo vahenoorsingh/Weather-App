@@ -4,14 +4,7 @@
     overflow-y: scroll;
     scrollbar-width: none;
 }
-.dailyTitle{
-    color: rgba(255, 255, 255, 0.582);
-    display: flex; 
-    align-items: center; 
-    gap: 5px; 
-    padding-bottom: 5px;
-    font-size: 1rem;
-}
+
 .dailyCard{
     display: grid;
     grid-template-columns: 1fr 1fr 4fr; 

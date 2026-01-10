@@ -35,6 +35,14 @@
     box-sizing: border-box;
     padding: 15px;
 }
+.Title{
+    color: rgba(255, 255, 255, 0.6);
+    display: flex; 
+    align-items: center; 
+    gap: 5px; 
+    padding-bottom: 5px;
+    font-size: 1rem;
+}
 .hourlyForecastSlide { grid-area: hourly; aspect-ratio: 6/1;}
 .dailyForecastSlide { grid-area: daily; aspect-ratio: 2/3;}
 .aqiSlide { grid-area: aqi; aspect-ratio: 2/1;}

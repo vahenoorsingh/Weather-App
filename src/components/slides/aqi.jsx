@@ -12,7 +12,7 @@ function AqiSlide({ aqiData }) {
     const leftOffset = `${(aqiValue / 500) * 100}%`
     return (
         <div className="aqiSlide slide">
-            <div className="dailyTitle">
+            <div className="Title">
                 <span class="material-symbols-outlined" style={{ fontSize: '1.1rem' }}>
                     pulmonology
                 </span>

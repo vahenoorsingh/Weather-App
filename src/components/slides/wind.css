@@ -1,0 +1,91 @@
+.windInfoContainer{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    padding-top: 10px;
+    height: 100px;
+}
+.windInfo{
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+.windFactor{
+    /* padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px rgba(255, 255, 255, 0.3) solid; */
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.separator{
+    height: 1px;
+    width: 100%;
+    /* background-color: rgba(255, 255, 255, 0.3); */
+}
+.wind-compass{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 110px;
+    margin-left: 10px;
+}
+.n{
+    font-size: 0.8rem;
+    position: absolute;
+    top:-8px;
+    color: rgba(255,255,255,0.7);
+}
+.s{
+    font-size: 0.8rem;
+    position: absolute;
+    bottom:-8px;
+    color: rgba(255,255,255,0.7);
+}
+.e{
+    font-size: 0.8rem;
+    position: absolute;
+    right:-6px;
+    color: rgba(255,255,255,0.7);
+}
+.w{
+    font-size: 0.8rem;
+    position: absolute;
+    left:-8px;
+    color: rgba(255,255,255,0.7);
+}
+.tick{
+    height: 1px;
+    width: 8px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.3);
+    left:50%;
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(var(--angle)) translateX(54px);
+}
+.compassSpeed{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 100px;
+    height: 63px;
+    width: 63px;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.compassForwardArrow{
+    position: absolute;
+    font-size: 2rem;
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5));
+}
+.compassBackwardArrow{
+    position: absolute;
+    font-size: 2rem;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.4));
+}

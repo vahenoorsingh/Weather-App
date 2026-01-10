@@ -13,7 +13,7 @@ export const getWeatherData = async () => {
     const { latitude, longitude, name } = geoData.results[0];
 
     const weatherResponse = await fetch(
-      `${weatherUrl}?latitude=${latitude}&longitude=${longitude}&daily=temperature_2m_max,temperature_2m_min&hourly=temperature_2m,weather_code&current=temperature_2m&timezone=auto&forecast_days=14`
+      `${weatherUrl}?latitude=${latitude}&longitude=${longitude}&daily=temperature_2m_max,temperature_2m_min,weather_code&hourly=temperature_2m,weather_code&current=temperature_2m,wind_speed_10m,wind_direction_10m,wind_gusts_10m&timezone=auto&forecast_days=14`
     );
     const weatherData = await weatherResponse.json();
     // console.log(weatherData);
