@@ -6,10 +6,11 @@ import Wind from "./slides/wind";
 import UvSlide from "./slides/uv";
 import SunriseSlide from "./slides/sunrise";
 import FeelLikeSlide from "./slides/feelLike";
-
+import PrecepitationSlide from "./slides/precipitation";
+import VisibilitySlide from "./slides/visibility";
 
 function Slides({ data }) {
-  // console.log(data)
+  console.log(data)
   return (
     <div className="slidesContainer">
       <HourlyForecastSlide hourlyData={data.hourly} />
@@ -20,10 +21,10 @@ function Slides({ data }) {
       <UvSlide uvData={data.uv} />
       <SunriseSlide sunrise={data.sunrise} sunset={data.sunset} />
       <FeelLikeSlide feelLikeData={data.feelLike} />
-      <div className="precepitationSlide slide"></div>
+      <PrecepitationSlide rainData={data.precipitation} />
       <div className="moonSlide slide"></div>
       <div className="humiditySlide slide"></div>
-      <div className="visibilitySlide slide"></div>
+      <VisibilitySlide visibilityData={data.visibility} />
       <div className="pressureSlide slide"></div>
       <div className="averagesSlide slide"></div>
     </div>

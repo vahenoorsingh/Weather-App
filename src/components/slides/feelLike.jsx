@@ -6,13 +6,13 @@ function FeelLikeSlide({ feelLikeData }) {
     const apt = Math.round(feelLikeData.apparent_temperature);
     const act = Math.round(feelLikeData.actual_temperature)
     if (apt === act) {
-        message = "Which is similar to actual temperature"
+        message = "Which is similar to actual temperature."
     }
     else if (apt > act) {
-        message = "Feels warmer than actual temperature"
+        message = "Feels warmer than actual temperature."
     }
     else {
-        message = "Feels cooler than actual temperature"
+        message = "Feels cooler than actual temperature."
     }
     return (
 

@@ -46,7 +46,7 @@
     align-items: center; 
     gap: 5px; 
     padding-bottom: 5px;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 .hourlyForecastSlide { grid-area: hourly; aspect-ratio: 6/1;}
 .dailyForecastSlide { grid-area: daily; aspect-ratio: 2/3;}

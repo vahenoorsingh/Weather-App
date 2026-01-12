@@ -13,7 +13,7 @@ export const getWeatherData = async () => {
     const { latitude, longitude, name } = geoData.results[0];
 
     const weatherResponse = await fetch(
-      `${weatherUrl}?latitude=${latitude}&longitude=${longitude}&daily=temperature_2m_max,temperature_2m_min,weather_code,sunrise,sunset,rain_sum&hourly=temperature_2m,weather_code,uv_index&current=temperature_2m,wind_speed_10m,wind_direction_10m,wind_gusts_10m,apparent_temperature&timezone=auto&forecast_days=14`
+      `${weatherUrl}?latitude=${latitude}&longitude=${longitude}&daily=temperature_2m_max,temperature_2m_min,weather_code,sunrise,sunset,rain_sum&hourly=temperature_2m,weather_code,uv_index&current=temperature_2m,wind_speed_10m,wind_direction_10m,wind_gusts_10m,apparent_temperature,visibility&timezone=auto&forecast_days=14`
     );
     const weatherData = await weatherResponse.json();
     console.log(weatherData);
@@ -29,7 +29,9 @@ export const getWeatherData = async () => {
       uv: { uv_index: weatherData.hourly.uv_index, time: weatherData.hourly.time },
       sunrise: weatherData.daily.sunrise,
       sunset: weatherData.daily.sunset,
-      feelLike: { apparent_temperature: weatherData.current.apparent_temperature, actual_temperature: weatherData.current.temperature_2m }
+      feelLike: { apparent_temperature: weatherData.current.apparent_temperature, actual_temperature: weatherData.current.temperature_2m },
+      precipitation: { rain: weatherData.daily.rain_sum, units: weatherData.daily_units.rain_sum },
+      visibility: weatherData.current.visibility
     };
   } catch (error) {
     console.error("fetch error", error);
