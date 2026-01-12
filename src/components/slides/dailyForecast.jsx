@@ -8,7 +8,7 @@ function DailyForecastSlide({ dailyData }) {
     const weeklyMin = Math.min(...dailyData.temperature_2m_min)
     const weeklyMax = Math.max(...maxTempData)
     const totalRange = weeklyMax - weeklyMin;
-    console.log(dailyData)
+    // console.log(dailyData)
     const weatherIconMap = {
         0: 'sunny',
         1: 'partly_cloudy_day', 2: 'partly_cloudy_day',

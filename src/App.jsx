@@ -17,6 +17,9 @@ function App() {
     }
     fetchWeather()
   }, [])
+
+
+
   // console.log(weather)
   if (!weather) {
     return <div className="loading">Loading Weather Data...</div>;
@@ -24,6 +27,8 @@ function App() {
 
   return (
     <div className="appContainer">
+      <div className='background-wrapper'></div>
+      <div className='stars'></div>
       <GeneralData data={weather.current} locationName={weather.location} maxTemp={weather.daily.temperature_2m_max[0]} minTemp={weather.daily.temperature_2m_min[0]} />
       <Slides data={weather} />
     </div>
