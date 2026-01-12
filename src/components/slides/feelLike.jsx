@@ -24,7 +24,7 @@ function FeelLikeSlide({ feelLikeData }) {
                 <span>FEELS LIKE</span>
             </div>
             <div className="feelLikeInfo">
-                <div style={{ fontSize: '2.5rem' }}>{apt}°</div>
+                <div style={{ fontSize: '2.3rem' }}>{apt}°</div>
                 <div style={{ fontSize: '0.9rem', marginTop: '20px' }}>{message}</div>
             </div>
         </div>

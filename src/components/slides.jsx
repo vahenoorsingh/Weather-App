@@ -8,6 +8,7 @@ import SunriseSlide from "./slides/sunrise";
 import FeelLikeSlide from "./slides/feelLike";
 import PrecepitationSlide from "./slides/precipitation";
 import VisibilitySlide from "./slides/visibility";
+import HumiditySlide from "./slides/humidity";
 
 function Slides({ data }) {
   console.log(data)
@@ -23,7 +24,7 @@ function Slides({ data }) {
       <FeelLikeSlide feelLikeData={data.feelLike} />
       <PrecepitationSlide rainData={data.precipitation} />
       <div className="moonSlide slide"></div>
-      <div className="humiditySlide slide"></div>
+      <HumiditySlide humidityData={data.humidity} startIndex={data.startIndex} dewPointData={data.dewpoint} />
       <VisibilitySlide visibilityData={data.visibility} />
       <div className="pressureSlide slide"></div>
       <div className="averagesSlide slide"></div>

@@ -19,7 +19,7 @@ function VisibilitySlide({ visibilityData }) {
                 <span>VISIBILITY</span>
             </div>
             <div className="visibilityInfo">
-                <div style={{ fontSize: '2.5rem' }}>{visibility}km</div>
+                <div style={{ fontSize: '2.3rem' }}>{visibility}km</div>
                 <div style={{ fontSize: '0.9rem' }}>{getVisibilityDescription(visibility)}</div>
             </div>
         </div>

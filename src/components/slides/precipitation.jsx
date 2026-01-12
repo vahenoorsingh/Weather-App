@@ -14,7 +14,7 @@ function PrecepitationSlide({ rainData }) {
             </div>
             <div className="rainInfo">
                 <div>
-                    <div style={{ fontSize: '2.5rem' }}>{rainData.rain[0]}{rainData.units}</div>
+                    <div style={{ fontSize: '2.3rem' }}>{rainData.rain[0]}{rainData.units}</div>
                     <div style={{ fontWeight: 'bold' }}>Today</div>
                 </div>
                 <div style={{ fontSize: '0.9rem' }}>{message}</div>
