@@ -11,7 +11,6 @@ import VisibilitySlide from "./slides/visibility";
 import HumiditySlide from "./slides/humidity";
 
 function Slides({ data }) {
-  console.log(data)
   return (
     <div className="slidesContainer">
       <HourlyForecastSlide hourlyData={data.hourly} />

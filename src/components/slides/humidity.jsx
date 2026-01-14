@@ -1,7 +1,7 @@
 import "./humidity.css"
 
 function HumiditySlide({ humidityData, startIndex, dewPointData }) {
-    console.log(dewPointData)
+    // console.log(dewPointData)
 
     return (
         <div className="humiditySlide slide">

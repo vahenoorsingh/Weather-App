@@ -3,7 +3,7 @@ const geoUrl = "https://geocoding-api.open-meteo.com/v1/search";
 const city = "Jalandhar";
 const hourlyUrl = "hourly=temperature_2m,weather_code,uv_index,dew_point_2m";
 const dailyUrl = "daily=temperature_2m_max,temperature_2m_min,weather_code,sunrise,sunset,rain_sum";
-const currentUrl = "current=temperature_2m,wind_speed_10m,wind_direction_10m,wind_gusts_10m,apparent_temperature,visibility,relative_humidity_2m"
+const currentUrl = "current=temperature_2m,wind_speed_10m,wind_direction_10m,wind_gusts_10m,apparent_temperature,visibility,relative_humidity_2m,is_day"
 
 export const getWeatherData = async () => {
   try {
@@ -29,7 +29,13 @@ export const getWeatherData = async () => {
     const startIndex = weatherData.hourly.time.findIndex(t => t.includes(`T${currentHour.toString().padStart(2, '0')}:00`))
     const finalStartIndex = startIndex === -1 ? 0 : startIndex
 
+    const sunriseHour = new Date(weatherData.daily.sunrise[0])
+    const sunsetHour = new Date(weatherData.daily.sunset[0])
 
+    let bgIndex = weatherData.current.is_day === 0 ? 0 : 1;
+    if ((Math.abs(currentHour - sunriseHour) < 2) || (Math.abs(currentHour - sunsetHour) < 2)) {
+      bgIndex = 2;
+    }
     return {
       location: name,
       current: weatherData.current,
@@ -44,7 +50,8 @@ export const getWeatherData = async () => {
       visibility: weatherData.current.visibility,
       humidity: weatherData.current.relative_humidity_2m,
       dewpoint: weatherData.hourly.dew_point_2m,
-      startIndex: finalStartIndex
+      startIndex: finalStartIndex,
+      bgIndex: bgIndex
     };
   } catch (error) {
     console.error("fetch error", error);

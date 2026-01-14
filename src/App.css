@@ -73,13 +73,22 @@
 }
 .background-wrapper{
     position: fixed;
-    background: 
-    /* radial-gradient(circle at 70% 0%, rgba(255, 255, 255, 0.5) 0%, transparent 40%), */
-    linear-gradient(0deg, #5da9ff 0%, #3e86e0 45%, #2465b8 100%);
+    
     background-blend-mode: overlay;
     height: 100vh;
     width: 100vw;
     z-index: -10;
+}
+.bg-afternoon {
+  background: linear-gradient(0deg, #5CA0F2 0%, #4085D6 45%, #1F60B8 100%);
+}
+
+.bg-evening {
+  background: linear-gradient(180deg, #3B4A8C 0%, #A66379 45%, #F29D5C 100%);
+}
+
+.bg-night {
+  background: linear-gradient(180deg, #0A121D 0%, #142033 50%, #2C3E5D 100%);
 }
 
 /* .stars{

@@ -1,7 +1,7 @@
 import "./visibility.css"
 
 function VisibilitySlide({ visibilityData }) {
-    console.log(visibilityData)
+    // console.log(visibilityData)
     const visibility = Math.round(visibilityData / 1000)
     const getVisibilityDescription = (km) => {
         if (km >= 16) return "It’s perfectly clear right now.";

@@ -27,11 +27,13 @@ function SunriseSlide({ sunset, sunrise }) {
                 </span>
                 <span>{nextEvent.type}</span>
             </div>
-            <div className="sunsetTime" style={{ fontSize: '1.6rem' }}>{new Date(nextEvent.time).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</div>
-            <svg width={'100%'} height={'60px'} viewBox="0 0 100 50">
-                <path d="M 0 40 Q 50 -20, 100 40" stroke="white" strokeWidth={'5'} fill="none" />
-            </svg>
-            <div className="sunriseTime" style={{ fontSize: '0.9rem' }}>{tempText}: {new Date(nextEvent2.time).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</div>
+            <div className="sunriseInfo">
+                <div className="sunsetTime" style={{ fontSize: '1.6rem' }}>{new Date(nextEvent.time).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</div>
+                {/* <svg width={'100%'} height={'60px'} viewBox="0 0 100 50">
+                    <path d="M 0 40 Q 50 -20, 100 40" stroke="white" strokeWidth={'5'} fill="none" />
+                </svg> */}
+                <div className="sunriseTime" style={{ fontSize: '0.9rem' }}>{tempText}: {new Date(nextEvent2.time).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</div>
+            </div>
         </div>
     )
 }

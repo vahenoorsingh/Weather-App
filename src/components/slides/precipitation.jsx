@@ -1,6 +1,6 @@
 import "./precipitation.css";
 function PrecepitationSlide({ rainData }) {
-    console.log(rainData)
+    // console.log(rainData)
     const maxRain = Math.max(...rainData.rain)
     const message = maxRain === 0 ? "None expected in next 14 days." : `precipitation upto ${maxRain}${rainData.units} expected in next 14 days.`
 
